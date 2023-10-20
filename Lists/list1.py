@@ -13,6 +13,16 @@ class listaEnlazada:
         nuevo_nodo = Nodo(valor)                # LOS ARGUMENTOS EN ESTE CASO EL VALOR A ALMACENAR EN EL NUEVO NODO
         nuevo_nodo.siguiente = self.cabeza      # EL NUEVO NODO APUNTA AL NODO ACTUAL DE LA CABEZA
         self.cabeza = nuevo_nodo        # LA CABEZA AHORA ES EL NUEVO NODO JSJSJS
+        
+    def agregar_al_final(self, valor):
+        nuevo_nodo = Nodo(valor)
+        if not self.cabeza:
+            self.cabeza = nuevo_nodo
+        else:
+            actual = self.cabeza
+            while actual.siguiente:
+                actual = actual.siguiente
+            actual.siguiente = nuevo_nodo
     
     def eliminar(self, valor):          # ELIMINA EL PRIMER NODO QUE CONTIENE EL VALOR ESPECIFICADO
         actual = self.cabeza            # EN LOS ARGUMENTOS EL VALOR EN ESTE CASO ES EL DEL NODO A ELIMINAR
@@ -52,4 +62,10 @@ mi_lista.mostrar()
 mi_lista.eliminar(2)
 
 # MOSTRAR LA LISTA PARA VER EL ELEMENTO ELIMINADO
+mi_lista.mostrar()
+
+# AGREGAR ELEMENTO AL FINAL DE LA LISTA
+mi_lista.agregar_al_final(4)
+
+# MOSTRAMOS LA LISTA
 mi_lista.mostrar()
