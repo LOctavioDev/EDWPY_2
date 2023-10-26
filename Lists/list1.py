@@ -7,7 +7,7 @@ class Nodo:
 
 class listaEnlazada:
     def __init__(self):
-        self.cabeza  = None    #EL CONSTRUCTOr DE LA CLASE listaEnlazada EN ESTE CASO INICIALIZA UNA LISTA VACIA.
+        self.cabeza  = None    #EL CONSTRUCTOR DE LA CLASE listaEnlazada EN ESTE CASO INICIALIZA UNA LISTA VACIA.
         
     def agregar_al_principio(self, valor):      # ACA AGREGAMOS UN NODO AL PRINCIPIO DE LA LISTA
         nuevo_nodo = Nodo(valor)                # LOS ARGUMENTOS EN ESTE CASO EL VALOR A ALMACENAR EN EL NUEVO NODO
