@@ -18,8 +18,7 @@ class ArraySorter:
             for j in range(0, n - i - 1):
                 if self.array[j] > self.array[j + 1]:
                     self.array[j], self.array[j + 1] = self.array[j + 1], self.array[j]
-
-                
+ 
 
 arr = [9,8,7,6,5,4,3,2,1]
 sorter = ArraySorter(arr)
